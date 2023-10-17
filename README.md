@@ -1,5 +1,10 @@
 # Breda Public Safety Data Analysis and Prediction Web App
 
+## Author
+- Created by: Fedor Chursin
+- Contact: fedorchursinsk@gmail.com
+- GitHub: fchursin
+
 Welcome to the Breda Public Safety Data Analysis and Prediction Web App repository! This project is a collaborative effort led by Fedor Chursin, featuring a team of talented individuals from various backgrounds. Our aim is to provide an insightful data analysis of crime rates and public safety in the city of Breda, as well as to offer a machine learning model that predicts the number of crimes in different regions of the city.
 
 ## Overview
