@@ -139,7 +139,11 @@ with tab1:
             if options and predictons_created:
                 predict_df = pd.DataFrame(predictions_dictionary)
                 predict_df = predict_df[predict_df.name.isin(options)]
+                predict_df['predicted_number_of_crimes'] = predict_df['predicted_number_of_crimes'].apply(
+                    lambda x: int(x) if x > 0 else 0
+                )
                 predict_df = predict_df.sort_values(by=['predicted_number_of_crimes'])
+
 
                 fig = px.bar(predict_df, x='name', y='predicted_number_of_crimes')
 
@@ -157,7 +161,7 @@ with tab1:
 
                         predictions_dictionary = {
                             'name': [name for name, prediction in predictions.items()],
-                            'predicted_number_of_crimes': [prediction['predicted_number_of_crimes'][0] for
+                            'predicted_number_of_crimes': [int(prediction['predicted_number_of_crimes'][0]) for
                                                            name, prediction in predictions.items()]
                         }
 
